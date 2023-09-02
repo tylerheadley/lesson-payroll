@@ -1,6 +1,5 @@
 const fileInput = document.getElementById('file');
 const button = document.getElementById('button');
-// const output = document.getElementById('output');
 let output = "";
 button.onclick = function() {
     const fileList = fileInput.files;
@@ -31,7 +30,6 @@ function parseCSVText(csvString, payPeriodDates) {
     const rows = [];
 
     const rowData = csvString.split("\" \"");
-    // console.log(rowData);
 
     for (let i = 0; i < rowData.length; i++) {
         const lessons = rowData[i].split("\n");
@@ -132,18 +130,10 @@ function timeDiff(startTime, endTime) {
     const startTimeMin = parseInt(startTime.slice(4,6));
     const endTimeHour = parseInt(endTime.slice(1,3));
     const endTimeMin = parseInt(endTime.slice(4,6));
-    // console.log(startTime.slice(0,2));
-    // console.log(endTime.slice(3,5));
-
-    // console.log(startTimeHour);
-    // console.log(startTimeMin);
-    // console.log(endTimeHour);
-    // console.log(endTimeMin);
     let diff = (endTimeHour - startTimeHour) + ((endTimeMin - startTimeMin) / 60);
     if (diff < 0) {
         diff += 12;
     }
-    // console.log(startTime, endTime, diff);
     return diff;
 }
 

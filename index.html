@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
     <head>
         <meta charset="utf-8">
@@ -10,26 +6,15 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/styles.css">
+        <link rel="stylesheet" href="./styles.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-        <!-- <script src="PapaParse/papaparse.js"></script> -->
-        <script type="module" src="/FileConverter.js"></script>
-        <!-- <script src="papaparse.min.js"></script>
-        <script>
-            function handleFiles() {
-                console.log('asdf');
-                let file = document.getElementById("file").files[0];
-
-                Papa.parse(file, {
-                    complete: function(result) {
-                        console.log(result.data)
-                    }
-                });
-            }
-        </script> -->
+        <script type="module" src="./FileConverter.js"></script>
     </head>
     <body>
         <div class="container">
+            <br>
+            <br>
+            <br>
             <h1 class="text-center">Swim Lesson Payroll Converter</h1>
             <p class="text-center">This site can be used to easily convert a file exported from CivicRec to payroll for the SOCP Swim Lesson Program.</p>
             <ol>
@@ -56,9 +41,6 @@
                     <p id="output"></p>
                 </li>
             </ol>
-            
-            
         </div>
-        
     </body>
 </html>
