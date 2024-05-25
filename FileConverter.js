@@ -45,7 +45,7 @@ function parseCSVText(csvString, payPeriodDates) {
             const row = {
                 title: firstLesson[0],
                 employee: firstLesson[1],
-                hoursPerDay: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                hoursPerDay: Array(Object.keys(payPeriodDates).length).fill(0),
                 total: 0,
                 rate: firstLesson[0] === "\"1:1 Swim Coaching\"" ? 35.00 : 30.00,
                 earnings: 0,
@@ -54,14 +54,10 @@ function parseCSVText(csvString, payPeriodDates) {
                 }
             };
 
-            // console.log(lessons);
-
             for (let j = 2; j < lessons.length; j++) {
                 const lessonData = lessons[j].split(",");
 
                 if (lessonData.length > 1) {
-                    // console.log(lessonData[3]);
-                    // console.log(lessonData[4]);
                     const lessonLength = timeDiff(lessonData[3], lessonData[4]);
                     if (lessonLength !== NaN) {
                         row.hoursPerDay[payPeriodDates[lessonData[2]]] += lessonLength;

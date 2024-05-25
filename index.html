@@ -12,9 +12,6 @@
     </head>
     <body>
         <div class="container">
-            <br>
-            <br>
-            <br>
             <h1 class="text-center">Swim Lesson Payroll Converter</h1>
             <p class="text-center">This site can be used to easily convert a file exported from CivicRec to payroll for the SOCP Swim Lesson Program.</p>
             <ol>
@@ -23,24 +20,19 @@
                 <li>Under "Filters", check "1:1 Swim Coaching", "Swim Instructors", and "Customer Reservation".</li>
                 <li>Under "Fields", check "Location", "Facility", "Start Date", "Start Time", "End Time", and "Full Name".</li>
                 <li>Export the report as a normal spreadsheet.</li>
-                <li>
-                    Upload the .csv file here:
-                    <br>
-                    <br>
-                    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-                        <label for="start">Payperiod Start Date</label>
-                        <input type="date" id="start"></div>
-                        <br>
-                        <label for="end">Payperiod End Date</label>
-                        <input type="date" id="end"></input>
-                        <br>
-                        <input type="file" class="btn btn-secondary text-center" id="file" accept=".csv"></input>
-                        <button type="button" id="button" class="btn btn-primary">upload</button>
-                        
-                    </div>
-                    <p id="output"></p>
-                </li>
+                <li>Upload the .csv file here.</li>
             </ol>
+            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                <label for="start">Payperiod Start Date</label>
+                <input type="date" id="start"></div>
+                <br>
+                <label for="end">Payperiod End Date</label>
+                <input type="date" id="end"></input>
+                <br>
+                <input type="file" class="btn btn-secondary text-center" id="file" accept=".csv"></input>
+                <button type="button" id="button" class="btn btn-primary">upload</button>
+            </div>
+            <p id="output"></p>
         </div>
     </body>
 </html>
